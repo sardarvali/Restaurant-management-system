@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu - Restaurant Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Floating View Cart Button -->
+<a href="viewcart.html" class="view-cart-btn">
+    <i class="fas fa-shopping-cart"></i> View Cart
+</a>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo" width="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="menu.html">Food Menu</a></li>
+            
+        </ul>
+        <div class="nav-icons">
+            <input type="text" class="form-control" placeholder="Search..." style="width: 150px;">
+            <a href="#" id="userIcon" class="nav-link"><i class="fas fa-user"></i></a>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h1 class="main-title">Food Menu</h1><br>
+    <h2 class="text-center mb-4">Briynai's</h2>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/briyani.png" alt="Chicken Dum Briynai" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Chicken Dum Briynai</h5>
+                    <p>Rs.220</p>
+                    <button class="btn btn-primary" onclick="addToCart('Chicken Dum Briynai', 200)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/fried briyani.png" alt="Fried Piece Briynai" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Fried Piece Briynai</h5>
+                    <p>Rs.240</p>
+                    <button class="btn btn-primary" onclick="addToCart('Fried Piece Briynai', 240)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/bamboo briyani.png" alt="Bamboo Briynai" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Bamboo Briynai</h5>
+                    <p>Rs.240</p>
+                    <button class="btn btn-primary" onclick="addToCart('Bamboo Briynai', 240)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/Tandoori Special Biryani.png" alt="Tandoori Special Biryani" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Tandoori Special Biryani</h5>
+                    <p>Rs.260</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tandoori Special Biryani', 260)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+        <h2 class="text-center mb-4">Starters</h2>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/chilli chicken.png" alt="Chilli Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Chilli Chicken</h5>
+                    <p>Rs.380</p>
+                    <button class="btn btn-primary" onclick="addToCart('Chilli Chicken', 380)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/fried chicken.png" alt="Fried Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Fried Chicken</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Fried Chicken', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/chicken wings.png" alt="Chicken Wings" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Chicken Wings</h5>
+                    <p>Rs.320</p>
+                    <button class="btn btn-primary" onclick="addToCart('Chicken Wings', 320)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/chicken pakoda.png" alt="Chicken Pakoda" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Chicken Pakoda</h5>
+                    <p>Rs.320</p>
+                    <button class="btn btn-primary" onclick="addToCart('Chicken Pakoda', 320)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/tandoori chicken.png" alt="Tandoori Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Tandoori Chicken</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tandoori Chicken', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/tandoori tikka chicken.png" alt="Tandoori Tikka Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Tandoori Tikka Chicken</h5>
+                    <p>Rs.380</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tandoori Tikka Chicken', 380)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/majestic chicken.png" alt="Majestic Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Majestic Chicken</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Majestic Chicken', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/crispy chicken.png" alt="Crispy Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Crispy Chicken</h5>
+                    <p>Rs.400</p>
+                    <button class="btn btn-primary" onclick="addToCart('Crispy Chicken', 400)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="text-center mb-4">Roti's</h2>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/butter roti.png" alt="Butter Roti" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Butter Roti</h5>
+                    <p>Rs.15</p>
+                    <button class="btn btn-primary" onclick="addToCart('Butter Roti', 15)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/butter naan.png" alt="Butter Naan" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Butter Naan</h5>
+                    <p>Rs.30</p>
+                    <button class="btn btn-primary" onclick="addToCart('Butter Naan', 30)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/rotis.png" alt="Roti" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Roti</h5>
+                    <p>Rs.10</p>
+                    <button class="btn btn-primary" onclick="addToCart('Roti', 10)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/rumali roti.png" alt="Rumali Roti" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Rumali Roti</h5>
+                    <p>Rs.25</p>
+                    <button class="btn btn-primary" onclick="addToCart('Rumali Roti', 25)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mb-4">Curry</h2>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/rara chicken.png" alt="Rara Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Rara Chicken</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Rara Chicken', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/tawachicken.png" alt="Tawa Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Tawa Chicken</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Tawa Chicken', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/butter chicken.png" alt="Butter Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Butter Chicken</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Butter Chicken', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/masala chicken.png" alt="Masala Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Masala Chicken</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Masala Chicken', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h2 class="text-center mb-4">Mandi's</h2>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/single mandi.png" alt="Chicken Mandi" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Chicken Mandi(1 pic)</h5>
+                    <p>Rs.220</p>
+                    <button class="btn btn-primary" onclick="addToCart('Chicken Mandi(1 pic)', 220)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/fried mandi.png" alt="Fry Mandi" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Fry Mandi(3 pics)</h5>
+                    <p>Rs.600</p>
+                    <button class="btn btn-primary" onclick="addToCart('Fry Mandi(3 pics)', 600)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/juicy mandi.png" alt="Juicy Mandi" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Juicy Mandi(3 pics)</h5>
+                    <p>Rs.650</p>
+                    <button class="btn btn-primary" onclick="addToCart('Juicy Mandi(3 pics)', 650)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/arabian mandi.png" alt="Arabian mandi" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Arabian Special Mandi</h5>
+                    <p>Rs.650</p>
+                    <button class="btn btn-primary" onclick="addToCart('Arabian Special Mnadi', 650)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="text-center mb-4">Veg-Item's</h2>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/paneer briyani.jpeg" alt="Paneer Briyani" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Paneer Briyani</h5>
+                    <p>Rs.150</p>
+                    <button class="btn btn-primary" onclick="addToCart('Paneer Briyani', 150)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/paneer fried.png" alt="Fried Rice" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Paneer Fried Rice</h5>
+                    <p>Rs.100</p>
+                    <button class="btn btn-primary" onclick="addToCart('Paneer Fried Rice ', 100)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/paneer butter masala.jpeg" alt="butter masala" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Paneer Butter Masala</h5>
+                    <p>Rs.200</p>
+                    <button class="btn btn-primary" onclick="addToCart('Paneer Butter Masala', 200)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/paneer tikka.jpeg" alt="Tikka" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Paneer Tikka</h5>
+                    <p>Rs.200</p>
+                    <button class="btn btn-primary" onclick="addToCart('Paneer Tikka', 200)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5">
+    &copy; 2024 Restaurant Management System
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

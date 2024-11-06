@@ -1,0 +1,388 @@
+
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+
+
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e0e0e0;
+}
+
+.nav-icons input[type="text"] {
+    margin-right: 5px;
+}
+
+
+/* Fullscreen background */
+.hero-section {
+    background-image: url('images/delicious.png'); /* Replace with your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark overlay for readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero-section .row {
+    position: relative;
+    z-index: 2;
+}
+
+.display-4 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Animation for the image */
+.animated-img {
+    animation: zoomIn 1.2s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);  
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+.offer-section{
+    width: 80;
+
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    color: #333;
+    width: 1%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+
+.offer-section h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.offer-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 300px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Added for hover effect */
+}
+
+.offer-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1; /* Always visible */
+    padding: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.offer-slide:hover .offer-overlay {
+    background-color: rgba(0, 0, 0, 0.6); 
+    transform: scale(1.05); 
+}
+
+.offer-overlay h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.offer-overlay p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.offer-button {
+    margin-top: 1rem;
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.offer-button:hover {
+    background-color: #e64a19;
+}
+
+
+
+
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+h1.main-title {
+    text-align: center;
+    font-size: 3rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Section Headings */
+ h2 {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ddd;
+    display: inline-block;
+}
+
+/* Card styling */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    border: none;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+/* Floating Cart Button */
+.view-cart-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 1000;
+}
+.view-cart-btn i {
+    font-size: 22px;
+}
+.view-cart-btn:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles.css */
+
+
+
+
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.back-button:hover {
+    background-color: #e53935;
+    text-decoration: none;
+}
+
+.cart-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.cart-item:hover {
+    transform: scale(1.05);
+}
+
+.remove-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: #e53935;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#totalPrice {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.cart-actions button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-actions button:hover {
+    background-color: #45a049;
+}
+#totalPrice {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center; /* Centers the text */
+}
+

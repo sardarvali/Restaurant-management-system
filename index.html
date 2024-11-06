@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+<!-- Navbar -->
+<!-- Navbar -->
+<!-- Navbar (No carousel controls here) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo" width="50"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Food Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" id="bookTable">Book Table</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        </ul>
+        <div class="nav-icons">
+            <input type="text" class="form-control" placeholder="Search..." style="width: 150px;">
+        </div>
+        <div><a href="#" id="userIcon" class="nav-link"><i class="fas fa-user"></i></a></div>
+    </div>
+</nav>
+
+
+<!-- Main Content -->
+<!-- Hero Section (No carousel controls here) -->
+<div class="hero-section">
+    <div class="row text-center w-100">
+        <div class="col-md-6">
+            <h1 class="display-4 text-white">Enjoy Delicious Food</h1>
+            <p class="lead text-white mb-4">Your satisfaction is our priority.</p>
+            <a href="menu.html" class="btn btn-primary btn-lg shadow">View Menu</a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="images/delicious.png" alt="Dish Image" class="img-fluid animated-img">
+        </div>
+    </div>
+</div>
+
+
+
+    <div>
+    <div class="container mt-4">
+    <h1 class="text-center mb-4">Popular Dishes</h1>
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/mandi 2 pics.png" alt="mandi 2 pics" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Mandi(2 pics)</h5>
+                    <p>RS.400</p>
+                    <button class="btn btn-primary" onclick="addToCart('Mandi(2 pics)', 400)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/kaju chicken.png" alt="Kaju chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Kaju Chicken Fry</h5>
+                    <p>Rs.350</p>
+                    <button class="btn btn-primary" onclick="addToCart('Kaju Chicken fry', 350)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/haleem.png" alt="haleem" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Chicken Haleem</h5>
+                    <p>Rs.200</p>
+                    <button class="btn btn-primary" onclick="addToCart('Chicken Haleem', 200)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="images/omlet.png" alt="Omlet" class="card-img-top">
+                <div class="card-body text-center">
+                    <h5>Omlet</h5>
+                    <p>Rs.50</p>
+                    <button class="btn btn-primary" onclick="addToCart('Omlet', 50)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+            
+
+    </div>
+
+
+    <div class="offer-section mt-5">
+        <h2>Special Offers</h2>
+        <div id="offerCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Offer 1 -->
+                <div class="carousel-item active">
+                    <div class="offer-slide" style="background-image: url('images/offer1.jpg');">
+                        <div class="offer-overlay">
+                            <h3>Buy 2 Mandi (3 pieces) for only Rs. 1099!</h3>
+                            <p>Gather your friends and family and enjoy our delectable Mandi dishes with this fantastic deal! Perfect for sharing, our Mandi is made with the finest ingredients, providing an authentic taste experience.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Offer 2 -->
+                <div class="carousel-item">
+                    <div class="offer-slide" style="background-image: url('images/offer2.jpg');">
+                        <div class="offer-overlay">
+                            <h3>20% Off on Bills Greater than Rs. 2500</h3>
+                            <p>Whether it's a feast or a family gathering, enjoy 20% off your total bill when you dine with us and spend over Rs. 2500! Treat yourself to a culinary adventure and save while you savor every bite.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Offer 3 -->
+                <div class="carousel-item">
+                    <div class="offer-slide" style="background-image: url('images/offer3.jpg');">
+                        <div class="offer-overlay">
+                            <h3>15% Off Every Weekend on Your Total Bill</h3>
+                            <p>Weekends are meant for enjoyment! Come and relish our exquisite dishes with a delightful 15% discount on your entire bill. Make your weekends special with our scrumptious offerings!</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Offer 4 -->
+                <div class="carousel-item">
+                    <div class="offer-slide" style="background-image: url('images/offer4.jpg');">
+                        <div class="offer-overlay">
+                            <h3>25% Off on Birthday Parties</h3>
+                            <p>Celebrate your special day with us! Book your birthday party and enjoy a 25% discount on your total bill. Create unforgettable memories with your loved ones while we take care of the delicious food!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <a class="carousel-control-prev" href="#offerCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#offerCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    
+        <div class="text-center mt-4">
+            <p class="text-danger"><strong>Disclaimer:</strong> All offers are valid for offline customers only. We look forward to serving you in our restaurant!</p>
+        </div>
+    </div>
+    
+
+        
+        </div>
+    </div>
+    
+    
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5">
+    &copy; 2024 Restaurant Management System
+</footer>
+
+    <!-- Floating View Cart Button -->
+    <a href="viewcart.html" class="view-cart-btn">
+        <i class="fas fa-shopping-cart"></i> View Cart
+    </a>
+
+
+
+
+
+
+<!-- Book Table Modal -->
+<div class="modal fade" id="bookTableModal" tabindex="-1" role="dialog" aria-labelledby="bookTableModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookTableModalLabel">Book a Table</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" class="form-control" id="time" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- User Modal -->
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="userModalLabel">User Login</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Login Form -->
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <!-- Links below the Login button -->
+                    <p class="mt-3 text-center">
+                        <a href="#" id="forgotPasswordLink">Forgot Password?</a> |
+                        <a href="#" id="signUpLink">Sign Up</a>
+                    </p>
+                </form>
+
+                <!-- Forgot Password Form -->
+                <form id="forgotPasswordForm" style="display:none;">
+                    <button type="button" class="backButton btn btn-link"><i class="fas fa-arrow-left"></i> Back</button>
+                    <div class="form-group">
+                        <label for="forgotEmail">Email</label>
+                        <input type="email" class="form-control" id="forgotEmail" required>
+                    </div>
+                    <button type="button" id="nextButton" class="btn btn-primary">Next</button>
+                </form>
+
+                <!-- OTP Form -->
+                <form id="otpForm" style="display:none;">
+                    <button type="button" class="backButton btn btn-link"><i class="fas fa-arrow-left"></i> Back</button>
+                    <div class="form-group">
+                        <label for="otp">Enter OTP</label>
+                        <input type="text" class="form-control" id="otp" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verify OTP</button>
+                </form>
+
+                <!-- Sign Up Form -->
+                <form id="signUpForm" style="display:none;">
+                    <button type="button" class="backButton btn btn-link"><i class="fas fa-arrow-left"></i> Back</button>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email</label>
+                        <input type="email" class="form-control" id="signUpEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactNumber">Contact Number</label>
+                        <input type="tel" class="form-control" id="contactNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" class="form-control" id="signUpPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
