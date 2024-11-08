@@ -1,4 +1,10 @@
+const $ = require('jquery');  // Import jQuery
+
+
+
+
 $(document).ready(function() {
+    console.log("jQuery is now ready and working!");
     // Show Book Table Modal
     $('#bookTable').on('click', function() {
         $('#bookTableModal').modal('show');
@@ -176,4 +182,105 @@ function loadCartItems() {
 
     totalPriceDiv.textContent = "Total Price: RS." + total;
 }
+
+
+
+
+
+
+// for receipt
+
+
+function makePayment() {
+    if (confirm("Proceed to payment?")) {
+        alert("Payment successful! Thank you for your order.");
+        
+        displayReceipt(); // Show receipt after payment
+        
+        localStorage.removeItem("cart"); 
+        loadCartItems(); 
+    }
+}
+
+// Function to display the receipt
+function displayReceipt() {
+    const receiptDiv = document.getElementById("receipt");
+    const receiptItemsDiv = document.getElementById("receiptItems");
+    const receiptTotal = document.getElementById("receiptTotal");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+    let itemMap = {};
+
+    receiptItemsDiv.innerHTML = "";
+
+    // Aggregate items and calculate total
+    cart.forEach(item => {
+        if (itemMap[item.name]) {
+            itemMap[item.name].count += 1;
+        } else {
+            itemMap[item.name] = { ...item, count: 1 };
+        }
+        total += item.price;
+    });
+
+    // Display each unique item in the receipt
+    for (let itemName in itemMap) {
+        const item = itemMap[itemName];
+        const itemLine = document.createElement("p");
+        itemLine.textContent = `${item.name} - RS.${item.price} (x${item.count})`;
+        receiptItemsDiv.appendChild(itemLine);
+    }
+
+    receiptTotal.textContent = "Total Price: RS." + total;
+    receiptDiv.style.display = "block"; // Show the receipt section
+}
+
+function loadCartItems() {
+    const cartItemsDiv = document.getElementById("cartItems");
+    const totalPriceDiv = document.getElementById("totalPrice");
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let total = 0;
+    let itemMap = {};
+
+    cartItemsDiv.innerHTML = "";
+
+    if (cart.length === 0) {
+        cartItemsDiv.innerHTML = `<p class="empty-message">Your cart is empty. Add some items!</p>`;
+        totalPriceDiv.textContent = "Total Price: RS. 0";
+        return;
+    }
+
+    cart.forEach(item => {
+        if (itemMap[item.name]) {
+            itemMap[item.name].count += 1;
+        } else {
+            itemMap[item.name] = { ...item, count: 1 };
+        }
+        total += item.price;
+    });
+
+    // Display each unique item with its count
+    for (let itemName in itemMap) {
+        const item = itemMap[itemName];
+        const itemDiv = document.createElement("div");
+        itemDiv.classList.add("cart-item", "fade-in");
+
+        itemDiv.innerHTML = `
+            <span>${item.name} - RS.${item.price} (x${item.count})</span>
+            <button class="remove-button" onclick="removeItem('${item.name}')">Remove</button>
+        `;
+
+        cartItemsDiv.appendChild(itemDiv);
+    }
+
+    totalPriceDiv.textContent = "Total Price: RS." + total;
+}
+
+
+
+
+
+
 

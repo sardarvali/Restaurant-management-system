@@ -386,3 +386,61 @@ button:hover {
     text-align: center; /* Centers the text */
 }
 
+
+
+
+
+
+
+/* receipt */
+.receipt-container {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px 30px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Receipt title and message */
+.receipt-container h2 {
+    margin-top: 0;
+    color: #333;
+}
+.receipt-container p {
+    color: #555;
+}
+
+/* Items in receipt */
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Total price */
+.receipt-total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #222;
+}
+
+/* Close button */
+.close-button {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}

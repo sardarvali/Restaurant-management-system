@@ -1,0 +1,24 @@
+{
+  "name": "rsm",
+  "version": "1.0.0",
+  "description": "Restaurant management system",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sardarvali/Restaurant-management-system.git"
+  },
+  "author": "syed sardar valli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sardarvali/Restaurant-management-system/issues"
+  },
+  "homepage": "https://github.com/sardarvali/Restaurant-management-system#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "jquery": "^3.7.1"
+  }
+}
